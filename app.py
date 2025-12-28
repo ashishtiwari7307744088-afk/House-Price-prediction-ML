@@ -24,7 +24,7 @@ scaler = StandardScaler()
 scaled_X = scaler.fit_transform(X)
 final_value = scaler.transform([all_value])
 @st.cache_data
-def model_run():
+def model_run(X,y):
   model = RandomForestRegressor()
   model.fit(X,y)
   return model
@@ -40,6 +40,7 @@ st.success(msg)
 
 
 st.markdown('''**Design and Developed by:ashish kumar**''')
+
 
 
 
